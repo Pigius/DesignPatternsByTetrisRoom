@@ -18,10 +18,5 @@ Examples are based on `ruby` implementation (by using `Simple Delegator` class),
 
 Excellent comparison about writing own decorator versus using gem 'draper' could be found here, written by Paweł Dąbrowski article: http://pdabrowski.com/blog/build-your-own-decorator-pattern
 ```
-Give examples
-```
-
-### Futher reading
-
 
 
