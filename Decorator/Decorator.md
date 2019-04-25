@@ -8,6 +8,7 @@ Main points:
 
 Explanation from blackboard: 
 
+![alt text]('./decorator_explanation.JPG')
 
 
 ## Examples
