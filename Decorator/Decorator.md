@@ -7,10 +7,7 @@ Main points:
 -  When you decorate the given object you give it new methods that usually operates on the existing attributes of this object.
 
 Explanation from blackboard: 
-
-![alt text]('./decorator_explanation.JPG')
-
-
+![Image description](decorator_explanation.JPG)
 ## Examples
 
 Examples are based on `ruby` implementation (by using `Simple Delegator` class), and by `rails` `gem` `Draper`. Could be found in `simple_delegator.rb` for `ruby`, and `draper` for rails.
