@@ -33,7 +33,7 @@ an error. Let's take a look at Python example:
 
 ``` python
 # python
-obj = { name: 'Max' }
+obj = { 'name': 'Max' }
 
 obj['name'] #=> 'Max'
 obj['surname'] #=> Error! KeyError: 'surname'
