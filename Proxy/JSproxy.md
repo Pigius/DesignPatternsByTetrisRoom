@@ -1,5 +1,5 @@
 ### Proxy, reflection and metaprogramming in js
-
+  
 Since I started using javascript in my everyday work and migrated from backend world I’ve experienced some strange aspects 
 of that language. One of them annoys me - `undefined` instead of code execution error (among others when accessing property that doesn't 
 exist). Javascript behavior in this aspect is slightly different from Ruby, Python and from the most programming languages:
@@ -131,8 +131,7 @@ first: `trapTarget` - target object for the proxy, second: `key` - property  and
 Logic ends with returning `Reflect` - it is the js object without constructor (has only static methods) 
 which expresses default js behavior. Every proxy trap has an equivalent in `Reflect` method. 
 
-<center><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-28T10:57:51.851Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;KT1R89YZZIPHrD0EufzU\&quot; version=\&quot;10.6.5\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;lh_yR_ml-EyFlSGjHwGa\&quot; name=\&quot;Page-1\&quot;&gt;3VnfU+IwEP5rmLl70GmbttBHFfUevNE7nbnTt0BDG680TAhC/esvoUl/JMWCUnR4orvdbpJv90t2Qw9cTFfXFM7inyRESc+xwlUPDHuOY7vBgP8ITZZrAiEJRURxKI1KxT1+RVJpSe0Ch2heM2SEJAzP6soxSVM0ZjUdpJQs62YTktRHncEIGYr7MUxM7R8csjjXDjyr1P9AOIrVyLYl30yhMpaKeQxDsqyowGUPXFBCWP40XV2gRICncMm/u9rwtpgYRSnb5oMgunGePHobXi+sx+df/5wna3Di515eYLKQC76dIQoZJqmcNcsUFMsYM3Q/g2MhL3m4e+A8ZtOESzZ/lJ4QZWi1cYp2sXCeMYhMEaMZN5EfOArWTKWPlJcl9AXAcQV2ZQdltKPCdQkIf5CY7IBP38DnN5ovEvYJ4HiDrwbOwADHgAWFnE1SRMmILC9LxflawV8IWDCnXB0yShZpiMT4VgGgcPc2fHx0sqBj1J7zDNIIsbbYm+GgKOH8eKnPownb9adnlMKsYjAjOGXziuc7oSijDFwtyr7Gas3e7TdnRRnXfAZllIulvD/wanM+SOR5fGn2VwinwFHyI5dPrFPLU4rhqmo+zKrSHaKYLxlRpVxhljt0PCk+yqHFc+lKCFlHCfjRxDIyoTgyVSYMNN7n85JfvZVSrlNz5PiDuqOcOYajXVPd1SZsHGA6NbQNUC144zp0/1aLf78ZwG3no1G1I+rZh6ReQRTfrTJFMK+gTjNdhGDwrmSyVyWy3ULi7al3mD29YRP2NMYE76OerxdAOof3RD29lmijnuftRj2gn0pBi32g2fcPQSXXoNKUhHjCWdFY//LSjWlsQXP8CkdrA5GoEnZu7Z33vCHXwAUj87ypER/ABEcpf07QRLhSHDyTakZE2TjnVSROowchDE/c/VSPrlNPUeCY1WPQUDw6XRWPtllah2gC17W1NUIxfMGE9sTwV2uCThLe3q3D4icCuxF/6UdsjY6pOabQGeQADYW/3xA70FnszMqfo4f4Fjc7PuboZYHTAP+gAX27M/QDA/35DI3FxiWoAxV1jikIntUehMbmt7MoALMQexBt/+EvBow6t78lNp1dDADzZL2jZJV9+35cWVlkYaahXEHeO2hSmoeqgXi1OyCUxSQiKUyqLUK9CShtbsgaPYH5M2Isk7e1IhxNSb2XXhnIsqW1st9LU71rHe1odXRLmfu2eTdVrgKwesU7ehZX5YffqfT73U+/wVQ3HZ/Ml7LP7m9/IVXppvu1drpsoD/aTn8xdpp8Chr5tHPbrfuxPc3RntpuoDVhqpLf2Ba/bd/NhuECgxMxTMMEHVlJaQQ98IzdqKmresfhzcXyf748TuW/peDyPw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script></center>
+![Image description](proxyjs.png)
 
 Intercepting operations are possible by handler with a proxy's trap - the function that is responsible for proper operation and it's passed always as the second proxy argument.
 On the diagram I've displayed two branches - default behavior, and interception of default behavior by Proxy. 
